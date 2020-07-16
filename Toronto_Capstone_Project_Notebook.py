@@ -15,6 +15,36 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 # In[2]:
 
+### BUSINESS UNDERSTANDING
+
+
+# In[3]:
+"""
+In this notebook we'll be exploring the data from AirBnb Barcelona dataset http://insideairbnb.com/get-the-data.html published in year 2019. Datasets involves insights of interest related to prices, neigbourhoods, avalability or room types in the city.
+
+In recent years, I came across people who plans to go Toronto with various reasons. This reasons are mostly for studying, settling, working. And some of them was travelling or short term seminars or training courses. So there are people who wants to choose where to stay for long or short terms. And I am also in the group for long term staying. So I decided to analyze Toronto data for everyone and tried to answer mostly general questions below which everyone wants to know about before renting Airbnb house.
+
+
+1) Which districts have most alternative for different style of houses, where are the Airbnb guests clusters?
+
+2) Where the clients mostly looking a house for renting, what are the most popular districts for users?
+
+3) What is the map looks like when seperating the districts? Is it possible to see which locations of most popular 2 districts have the most reviews? Which locations of most popular 2 districts are cheaper then the rest? (On City Map)
+
+4) What is the distribution of room types by districts, and how is it looks in map? 
+
+5) Can we analyze all mean prices according to room types seperatly and district by district?
+
+6) Which moths are the most expensive months? When clients startes to search their target Airbnb, what are the most popular months for clients, and can we compare it for 2 years?
+
+
+For answering these questions, I created this notebook with visualizations.. If Airbnb publishs new data or update the data below, you can still use this notebook to analyse new/updated dataset.
+
+Let's start with loading datas..
+
+"""
+
+# In[4]:
 
 # LOADING DATAS
 
@@ -24,11 +54,10 @@ reviews=pd.read_csv('reviews.csv')
 neighbourhoods=pd.read_csv('neighbourhoods.csv')
 
 
-# In[3]:
 
+# In[5]:
 
 listing.head()
-
 
 # In[6]:
 
@@ -826,11 +855,43 @@ plt.tight_layout()
 plt.show()
 
 
-# In[ ]:
+# In[113]:
+
+# We also can define this subplot as a function since they have common parts. We can this functions for further data wranglings
+
+def create_subplot(data1, data2,figsize=(12,10), size=12, fontsize=15 ):
+    
+    fig = plt.figure(figsize = (12, 10))
+    list1=[1,2]
+    
+    for i in list1:
+        plt.subplot(2,2,i)
+        
+        if i==1:
+            ax=sns.barplot(x=data1.index, y='price', data=data1)
+            #Set the axes            
+            ax.set_xlabel('Room Type',size=size, weight='normal')
+            ax.set_ylabel('Mean Price in ($)',size=size, weight='normal')
+            #Set tittle
+            plt.title('Mean Price by Room Type in Toronto', fontsize=fontsize)
+            continue
+            
+        if i==2:
+            ax = sns.barplot('price', 'district',data=data2, ci=80,hue='room_type')
+            #Set the axes
+            ax.set_xlabel('Price in $', size=size, weight='normal')
+            ax.set_ylabel('Districts', size=size, weight='normal')
+            #Set tittle
+            plt.title('Price according the district', fontsize=fontsize)
+            
+        ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right", size=size)
+        plt.tight_layout()
+        plt.show()
 
 
+# In[115]:
 
-
+create_subplot(mean_prices_by_room_type,listing)
 
 # # Prices & Reviews Comperition by Month for 2018-2019
 
