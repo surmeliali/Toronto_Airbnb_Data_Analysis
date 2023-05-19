@@ -1,46 +1,34 @@
 # Toronto Airbnb Data Analysis
 
+This repository contains a data analysis project on Airbnb data from Toronto city. This project was done as part of my Udacity Data Science Nanodegree. It primarily explores the data to answer key questions about prices, popular districts, popular months, preferable places by districts, and types of rooms, which is essential for anyone planning to travel or settle in Toronto.
 
-Data analysis for a Medium article about Toronto City with Airbnb data | Data Science | Python | Udacity Nanodegree
+## Project Description
+The data for this project was sourced from the [Inside Airbnb](http://insideairbnb.com/get-the-data.html) website, which contained detailed information about Airbnb listings in Toronto. Additionally, neighbourhood data was manually added from [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_neighbourhoods_in_Toronto) as it wasn't available in the original dataset.
 
-In this notebook we'll be exploring the data from AirBnb Barcelona dataset http://insideairbnb.com/get-the-data.html published in year 2019. Datasets involves insights of interest related to prices, neigbourhoods, avalability or room types in the city.
+## Files in this Repository
 
-Unfortunately there was no data about 'Neighbourhoods' of the city that I wanted to analyse. So I manually added neighbourhoods. I took that data from wikipedia page: https://en.wikipedia.org/wiki/List_of_neighbourhoods_in_Toronto
+- `Toronto_Capstone_Project_Notebook.ipynb` : The main Jupyter Notebook file containing all analyses.
+- `Toronto_Capstone_Project_Notebook.py` : Python file converted from the Jupyter Notebook for those who want to analyze using their IDE.
 
-I mostly tried to answer my questions to don't know anything about Toronto at all. I am also in that group was thinking to go for traveling around Toronto in couple of months. So, questions been answered about the prices, popular districts, popular months, preferable places by districts and type of rooms etc. like everyone needs to know about before travel or settle. Even for a short term or a long term.
+## Data
 
+This project makes use of the following data files:
 
-# Files
+- `listings.csv` : Dataset of information about each listing in Toronto.
+- `reviews.csv` : Dataset of a summary version of reviews containing only the date, listing id, and reviewer id.
+- `neighbourhoods.csv` : Dataset of information about neighbourhoods in Toronto. 
 
+You can clone and download the files using: 
 
-1. Toronto_Capstone_Project_Notebook.ipynb : The main Jupyter Notebook file that I worked on 
-2. Toronto_Capstone_Project_Notebook.py : Converted to python file for who want to analyse in their IDE
-
-DATA FOLDER
-
-3. listings.csv : Dataset of information about each listing in Toronto.
-4. reviews.csv  : Dataset of a summary version of reviews containing only the date, listing id and reviewer id.
-5. neighbourhoods.csv : dataset of information about neigbourhoods in Toronto. 
-   Unfortunately neigbourhoods group column is not defined. We made it manually
-
-Download files from:
 $ git clone https://github.com/surmeliali/Toronto_AirBnb_Data_Analysis.git
 
 
-# Libraries Used
+## Libraries Used
 
+- numpy
+- pandas
+- seaborn
+- matplotlib.pyplot
 
-1. numpy
-2. pandas
-3. seaborn
-4. matplotlib.pyplot
-
-
-# Blog Post
-
-I also wrote a blog post on medium. You can reach the post via link below.
-
-https://medium.com/@as.alisurmeli/the-rising-star-of-20th-century-toronto-city-33c881252260
-
-
-
+## Results
+A detailed analysis and the results of the project are discussed in my Medium blog post [here](https://medium.com/@surmeliali/the-rising-star-of-20th-century-toronto-city-33c881252260).
