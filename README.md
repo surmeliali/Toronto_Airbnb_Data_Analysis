@@ -7,15 +7,16 @@ The data for this project was sourced from the [Inside Airbnb](http://insideairb
 
 ## Files in this Repository
 
-- `Toronto_Capstone_Project_Notebook.ipynb` : The main Jupyter Notebook file containing all analyses.
-- `Toronto_Capstone_Project_Notebook.py` : Python file converted from the Jupyter Notebook for those who want to analyze using their IDE.
+- `1_toronto_airbnb_etl_process.ipynb` : The main Jupyter Notebook for the ETL process of AirBnb datasets.
+- `2_toronto_airbnb_visual_analysis.ipynb` : This file should be run after the ETL process to visualize the clean datasets.
+- `toronto_airbnb_analysis.py` : Python file converted from the Jupyter Notebook for those who want to analyze using their IDE.
 
 ## Data
 
 This project makes use of the following data files:
 
 - `listings.csv` : Dataset of information about each listing in Toronto.
-- `reviews.csv` : Dataset of a summary version of reviews containing only the date, listing id, and reviewer id.
+
 - `neighbourhoods.csv` : Dataset of information about neighbourhoods in Toronto. 
 
 You can clone and download the files using: 
