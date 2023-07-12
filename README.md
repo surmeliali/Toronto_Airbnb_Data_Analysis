@@ -2,6 +2,10 @@
 
 This repository contains a data analysis project on Airbnb data from Toronto city. This project was done as part of my Udacity Data Science Nanodegree. It primarily explores the data to answer key questions about prices, popular districts, popular months, preferable places by districts, and types of rooms, which is essential for anyone planning to travel or settle in Toronto.
 
+# The blog page of the Toronto Airbnb Analysis
+
+Descriptive analysis and diagnostic analysis of the project are published on [my Medium blog post](https://medium.com/@surmeliali/the-rising-star-of-20th-century-toronto-city-33c881252260). 
+
 ## Project Description
 The data for this project was sourced from the [Inside Airbnb](http://insideairbnb.com/get-the-data.html) website, which contained detailed information about Airbnb listings in Toronto. Additionally, neighbourhood data was manually added from [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_neighbourhoods_in_Toronto) as it wasn't available in the original dataset.
 
@@ -31,5 +35,3 @@ $ git clone https://github.com/surmeliali/Toronto_AirBnb_Data_Analysis.git
 - seaborn
 - matplotlib.pyplot
 
-## Results
-A detailed analysis and the results of the project are discussed in my Medium blog post [here](https://medium.com/@surmeliali/the-rising-star-of-20th-century-toronto-city-33c881252260).
